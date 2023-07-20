@@ -1,0 +1,48 @@
+{
+    "name": "guilhermehernandez/buscador-cursos",
+    "description": "Busca cursos no site da Alura .",
+    "type": "library",
+    "autoload": {
+
+        "classmap":[
+            ""
+        ],
+        "files" : [
+            "./funcao.php"
+        ],
+        "psr-4": {
+            "Alura\\BuscadorDeCurso\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GuilhermeHernandez",
+            "email": "familiahernandez0123@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.7",
+        "symfony/dom-crawler": "^6.3",
+        "symfony/css-selector": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "^5.4"
+    },
+    "scripts": {
+        "cs" : "phpcs --standard=PSR12 src/buscador.php",
+        "phan" : "phan --allow-polyfill-parser",
+        "check" : [
+            "@cs",
+            "@phan"
+        ],
+        "post-update-cmd" : [
+            "@check"
+        ]
+
+    },
+    "scripts-descriptions": {
+        "check" : "Roda as verificações do codigo . PHAN, PHPCS"
+    }
+}
