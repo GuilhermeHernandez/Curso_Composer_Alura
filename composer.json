@@ -3,7 +3,6 @@
     "description": "Busca cursos no site da Alura .",
     "type": "library",
     "autoload": {
-
         "classmap":[
             ""
         ],
@@ -47,4 +46,5 @@
     },
     "license": "GPL-3.0",
     "bin" : ["Busca-cursos.php"]
+
 }
